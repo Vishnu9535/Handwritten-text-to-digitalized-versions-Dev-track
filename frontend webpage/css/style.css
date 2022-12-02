@@ -5,6 +5,11 @@
 
 .navbar {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    position:sticky;
+    top:0;
+    cursor:pointer;
 }
 
 .nav-list {
@@ -50,6 +55,7 @@
     width: 50%;
     text-align: right;
     /*background-color: yellow;*/
+    padding:0 23px;
 }
 
 #search {
@@ -69,7 +75,10 @@
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
+    align-items: center;
     margin-left: auto;
+    display: flex;
+    flex: auto;
 }
 
 .shadowBox {
@@ -395,6 +404,50 @@
     -ms-user-select: none;
     user-select: none;
     background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 8px;
+    cursor:pointer;
+    border:2px solid white;
+
+}
+
+.box-main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: purple;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin:auto;
+
+}
+.firstSection{
+    height:100vh;
+}
+.firstHalf{
+    width:75%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.secondHalf{
+    width:30%;
+}
+.secondHalf img{
+    width: 120%;
+    border: 4px solid plum;
+    border-radius: 10000px;
+    display: block;
+    margin: auto;
+}
+
+.text-big{
+    font-size: 50px;
+}
+.text-small{
+    font-size: 20px;
+}
+
+.btn-sm{
+    padding:6px 10px;
+    vertical-align: center;
 }
