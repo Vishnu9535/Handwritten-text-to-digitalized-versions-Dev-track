@@ -410,18 +410,20 @@
 
 }
 
-.box-main{
-    display:flex;
+.box-main {
+    display: flex;
     justify-content: center;
     align-items: center;
     color: purple;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 50%;
-    margin:auto;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100%;
+    width: 80%;
+    margin: auto;
 }
 .firstSection{
     height:100vh;
+    display: flex;
+    justify-content: center;
 }
 .firstHalf{
     width:75%;
@@ -440,8 +442,10 @@
     margin: auto;
 }
 
-.text-big{
-    font-size: 50px;
+.text-big {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
 }
 .text-small{
     font-size: 20px;
@@ -450,4 +454,92 @@
 .btn-sm{
     padding:6px 10px;
     vertical-align: center;
+}
+
+.outerShadowBox {
+    box-shadow: 0 0 6px 4px #ededed;
+    background: #fff;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 9px;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tab {
+    overflow: visible;
+    border: 1px solid #3ACD99;
+    background-color: #3ACD99;
+    height: 35px;
+    padding: 0.4rem;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.ttext {
+    position: sticky;
+    top: 0;
+}
+
+body {
+    background: #f4f8f9;
+    background-size: contain;
+    color: #333;
+    font-family: roboto,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+}
+
+div#copy-downlod-option {
+    font-size: 15px;
+    display: inline-block;
+    float: right;
+}
+
+.copyAllText, .downloadAllText, .downloadAllTextdoc {
+    position: relative;
+    cursor: pointer;
+    padding: 0.3rem 0;
+    background: #0000;
+    margin: 0 0.2rem;
+    /* border-radius: 5px; */
+    /* box-shadow: 2px 3px 5px 1px #e4e8e9; */
+    color: #fff !important;
+}
+
+
+div#copy-downlod-option i {
+    padding: 5px;
+    cursor: pointer;
+    color: #fff !important;
+}
+
+span.itxt {
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #9ab1bd;
+    vertical-align: middle;
+}
+
+.ttext .tabcontent {
+    min-height: 170px;
+    max-height: 600px;
+    background: #F8F8F8;
+    color: #33333F;
+    /* height: 170px; */
+    border-radius: 0 0 4px 4px;
+    white-space: pre-wrap!important;
+    text-align: left;
+    font-size: 18px;
+    line-height: 22px;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #DDDDDD;
+    border-top: none;
+    resize: vertical;
+    overflow: auto;
 }
