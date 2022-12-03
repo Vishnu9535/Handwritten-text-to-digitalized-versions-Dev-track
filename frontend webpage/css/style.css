@@ -72,13 +72,13 @@
 }
 
 .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     align-items: center;
     margin-left: auto;
     display: flex;
     flex: auto;
+    width:100%;
+    height:75%;
 }
 
 .shadowBox {
@@ -95,6 +95,10 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
 }
 
 .modal {
@@ -449,8 +453,9 @@
 }
 .text-small{
     font-size: 20px;
+    display: flex;
+    justify-content: center;
 }
-
 .btn-sm{
     padding:6px 10px;
     vertical-align: center;
@@ -462,7 +467,7 @@
     padding: 15px;
     overflow: hidden;
     border-radius: 9px;
-    width: 65%;
+    width: 79%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -542,4 +547,25 @@ span.itxt {
     border-top: none;
     resize: vertical;
     overflow: auto;
+}
+
+#col-md-2{
+    width:90%;
+    height:50%;
+    display:block;
+    align-items: center;
+
+}
+
+#col-md-1{
+    width:90%;
+    height:50%;
+    display:block;
+    align-items: center;
+}
+.thirdHalf{
+    height:40%
+}
+.text-white{
+    color:white
 }
