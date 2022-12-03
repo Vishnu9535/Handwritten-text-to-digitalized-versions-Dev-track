@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Handwritten Image to Text!!</title>
+</head>
+
+<body>
+    <section>
+        <img src="image/website-background-templates.jpg" alt="background not available" hidden>
+        <nav class="navbar background">
+            <ul class="nav-list">
+                <div class="logo"><img src="image/igottext-logo (1).jpg" alt="logo"></div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+            <div class="rightNav">
+                <input type="text" name="search" id="search">
+                <button class="btn btn-sm">Search</button>
+            </div>
+        </nav>
+
+        <section class="background firstSection">
+
+            <div class="col-md-1 outerShadowBox">
+                <div class="box-main">
+                    <div class="firstHalf">
+                        <p class="text-big">Image to Text Converter</p>
+                        <p class="text-small">use the browse button to find the image you need to process</p>
+                        <!--<div class="buttons">
+                        <button class="btn">View Team</button>
+                        <button class="btn"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;Like!!</button>
+                    </div>-->
+                    </div>
+                    <div class="thirdHalf">
+
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="container noP">
+
+                        <div class="col-md-12 shadowBox">
+                            <h1 class="h_tool">Image to Text Converter</h1>
+                            <div class="parent-ads-wrapper" style="text-align:center">
+                                <div style="display:inline-block;">
+                                </div>
+                                <div style="display:inline-block;margin-left:20px;">
+                                </div>
+                            </div>
+
+                            <span class="svg_block">
+                                <img src="image/upload-icon.png" width="148" height="107" alt="uploader">
+                            </span>
+                            <!-- <div class="text-center">
+                                <button type="button" class="btn btn-md" id="uploadBtn">
+                                    <span data-title="Upload Image">
+                                        <i class="fa fa-plus">
+                                        </i>
+                                        &nbsp;&nbsp;browse files
+                                    </span>
+                                </button>
+                            </div> -->
+
+
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-md-12 shadowBox">
+                        <h1 class="h_tool">Image to Text Converter</h1>
+                        
+                        <div class="container noP">
+                            <div class="col-xs-7 noP align-self-start ttext">
+                                <div class="tab ">
+                                    <div class="text-right display-inline float-right" id="copy-downlod-option">
+                                        <span class="copyAllText CopyToClipboard" data-copy="1" data-title="Copy Result"><i
+                                                class="fa fa-clone"></i><span class="itxt">Copy</span></span>
+                                        <span class="downloadAllText" data-copy="1" data-title="Download .txt"><i
+                                                class="fa fa-download"></i><span class="itxt">Txt</span></span>
+                                        <span class="downloadAllTextdoc" data-copy="1" data-title="Download .doc"><i
+                                                class="fa fa-file-word-o"></i><span class="itxt">Word</span></span>
+                                    </div>
+                                </div>
+                                <div contenteditable="true" id="textt1" class="tabcontent textContainer clipboardText1">
+                                    IGotTEXT!</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+        <section class="secRight">
+            <p class="sectionTag"></p>
+            <p class="sectionSubTag"></p>
+        </section>
+    </section>
+    <form method='POST' enctype = 'multipart/form-data'>
+        {{ form.hidden_tag()}}
+        {{form.file()}}
+        {{form.submit()}}
+    </form>
+
+</body>
+
+</html>
+
+        
+        
+            
+        
+        
+   
