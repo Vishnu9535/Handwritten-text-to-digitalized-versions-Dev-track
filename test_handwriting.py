@@ -118,6 +118,6 @@ def get_text(path):
 
 	# show the image
 	# print(fin)
-	cv2.imshow("Image", image)
-	cv2.waitKey(0)
-	return text
+	# cv2.imshow("Image", image)
+	# cv2.waitKey(0)
+	# return text
