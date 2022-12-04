@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Handwritten Image to Text!!</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+
 </head>
 
 <body>
@@ -27,13 +31,22 @@
             </div>
         </nav>
 
-        <section class="background firstSection">
 
+        <section class="background firstSection">
+            <section>
+                <div>
+                    <p class="text-white">&nbsp;</p>
+                    <p class="text-white">&nbsp;</p>
+                    <p class="text-white">&nbsp;</p>
+                </div>
+            </section>
             <div class="col-md-1 outerShadowBox">
                 <div class="box-main">
                     <div class="firstHalf">
                         <p class="text-big">Image to Text Converter</p>
                         <p class="text-small">use the browse button to find the image you need to process</p>
+                        <p class="text-white">&nbsp;</p>
+                        <p class="text-white">&nbsp;</p>
                         <p class="text-white">&nbsp;</p>
                         <!--<div class="buttons">
                         <button class="btn">View Team</button>
@@ -41,7 +54,7 @@
                     </div>-->
                     </div>
                     <div class="thirdHalf">
-                        
+
                     </div>
 
                 </div>
@@ -49,7 +62,7 @@
                     <div class="container noP">
 
                         <div class="col-md-1 shadowBox" id="col-md-1">
-                            <h1 class="h_tool">Image to Text Converter</h1>
+                            <h1 class="h_tool">Upload box</h1>
                             <div class="parent-ads-wrapper" style="text-align:center">
                                 <div style="display:inline-block;">
                                 </div>
@@ -58,27 +71,33 @@
                             </div>
 
                             <span class="svg_block">
-                                <img src="image/upload-icon.png" width="148" height="107" alt="uploader">
+                                <img src="image/upload-icon.png" width="50%" height="90%" alt="uploader">
                             </span>
                             <div class="text-center">
+                                <form method='POST' enctype='multipart/form-data'>
+                                    {{ form.hidden_tag()}}
+                                    {{form.file()}}
+                                    {{form.submit()}}
+                                </form>
                                 <button type="button" class="btn btn-md" id="uploadBtn">
                                     <span data-title="Upload Image">
-                                        <i class="fa fa-plus">
+                                        <i class="fa fa-check">
                                         </i>
-                                        &nbsp;&nbsp;browse files
+                                        &nbsp;&nbsp;SUBMIT
                                     </span>
                                 </button>
+
                             </div>
 
 
                         </div>
                     </div>
 
-                <div class="container noP">
-                    <div class="col-md-2 shadowBox" id="col-md-2">
-                        <h1 class="h_tool">Image to Text Converter</h1>
+                    <div class="container noP">
+                        <div class="col-md-2 shadowBox" id="col-md-2">
+                            <h1 class="h_tool">Tex box</h1>
 
-                        
+
                             <div class="col-xs-7 noP align-self-start ttext">
                                 <div class="tab ">
                                     <div class="text-right display-inline float-right" id="copy-downlod-option">
@@ -103,12 +122,157 @@
 
 
         </section>
+        <!--<section class="secRight">
+            <div class="paras">
+            <p class="sectionTag text-big">the end of your search is here</p>
+            <p class="sectionSubTag text-small">sidfjisdjfksdjlfslkjdf</p>
+        </div>
+        </section>
+
+        <section class="secLeft">
+            <div class="paras">
+            <p class="sectionTag text-big">the end of your search is here</p>
+            <p class="sectionSubTag text-small">sidfjisdjfksdjlfslkjdf</p>
+        </div>
+        </section>
+
         <section class="secRight">
-            <p class="sectionTag"></p>
-            <p class="sectionSubTag"></p>
+            <div class="paras">
+            <p class="sectionTag text-big">the end of your search is here</p>
+            <p class="sectionSubTag text-small">sidfjisdjfksdjlfslkjdf</p>
+        </div>
+        </section>
+        <div class="container lg:pt-14 p-8">
+            <div class="lg:px-2">
+                <div class="w-full text-center my-6">
+                    <h2 class="font-semibold text-4xl text-2xl text-center ">FAQ</h2>
+                </div>
+                <div class=" w-fill md:flex justify-center items-center">
+                    <div
+                        class="md:w-3/4  md:flex md:justify-end justify-center md:flex-col flex-row my-10 md:p-10 rounded-lg">
+                        <div class="md:mb-0 mb-5 p-5  duration-300 transition-all rounded-lg w-full mb-2">
+                            <div class="flex flex-row justify-between cursor-pointer">
+                                <div>
+                                    <h2 class="font-semibold text-2xl capitalize">How To Copy Text From an Image</h2>
+                                </div>
+                                <div class="flex justify-center items-center cursor-pointer px-5">
+                                    <div><svg width="15" height="15" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.93023 0C10.3065 0 10.6673 0.14946 10.9333 0.4155C11.1994 0.68154 11.3488 1.04237 11.3488 1.4186V8.51163H18.4419C18.8181 8.51163 19.1789 8.66109 19.445 8.92713C19.711 9.19317 19.8605 9.554 19.8605 9.93023C19.8605 10.3065 19.711 10.6673 19.445 10.9333C19.1789 11.1994 18.8181 11.3488 18.4419 11.3488H11.3488V18.4419C11.3488 18.8181 11.1994 19.1789 10.9333 19.445C10.6673 19.711 10.3065 19.8605 9.93023 19.8605C9.554 19.8605 9.19317 19.711 8.92713 19.445C8.66109 19.1789 8.51163 18.8181 8.51163 18.4419V11.3488H1.4186C1.04237 11.3488 0.68154 11.1994 0.4155 10.9333C0.14946 10.6673 0 10.3065 0 9.93023C0 9.554 0.14946 9.19317 0.4155 8.92713C0.68154 8.66109 1.04237 8.51163 1.4186 8.51163H8.51163V1.4186C8.51163 1.04237 8.66109 0.68154 8.92713 0.4155C9.19317 0.14946 9.554 0 9.93023 0Z"
+                                                fill-rule="evenodd" clip-rule="evenodd" fill="#016bc9"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <hr class="">
+                        <div class="md:mb-0 mb-5 p-5  duration-300 transition-all rounded-lg w-full mb-2">
+                            <div class="flex flex-row justify-between cursor-pointer">
+                                <div>
+                                    <h2 class="font-semibold text-2xl capitalize">How photo to text tools Works?</h2>
+                                </div>
+                                <div class="flex justify-center items-center cursor-pointer px-5">
+                                    <div><svg width="15" height="15" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.93023 0C10.3065 0 10.6673 0.14946 10.9333 0.4155C11.1994 0.68154 11.3488 1.04237 11.3488 1.4186V8.51163H18.4419C18.8181 8.51163 19.1789 8.66109 19.445 8.92713C19.711 9.19317 19.8605 9.554 19.8605 9.93023C19.8605 10.3065 19.711 10.6673 19.445 10.9333C19.1789 11.1994 18.8181 11.3488 18.4419 11.3488H11.3488V18.4419C11.3488 18.8181 11.1994 19.1789 10.9333 19.445C10.6673 19.711 10.3065 19.8605 9.93023 19.8605C9.554 19.8605 9.19317 19.711 8.92713 19.445C8.66109 19.1789 8.51163 18.8181 8.51163 18.4419V11.3488H1.4186C1.04237 11.3488 0.68154 11.1994 0.4155 10.9333C0.14946 10.6673 0 10.3065 0 9.93023C0 9.554 0.14946 9.19317 0.4155 8.92713C0.68154 8.66109 1.04237 8.51163 1.4186 8.51163H8.51163V1.4186C8.51163 1.04237 8.66109 0.68154 8.92713 0.4155C9.19317 0.14946 9.554 0 9.93023 0Z"
+                                                fill-rule="evenodd" clip-rule="evenodd" fill="#016bc9"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <hr class="">
+                        <div class="md:mb-0 mb-5 p-5  duration-300 transition-all rounded-lg w-full mb-2">
+                            <div class="flex flex-row justify-between cursor-pointer">
+                                <div>
+                                    <h2 class="font-semibold text-2xl capitalize"> Why do We Need to extract text from
+                                        images?</h2>
+                                </div>
+                                <div class="flex justify-center items-center cursor-pointer px-5">
+                                    <div><svg width="15" height="15" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.93023 0C10.3065 0 10.6673 0.14946 10.9333 0.4155C11.1994 0.68154 11.3488 1.04237 11.3488 1.4186V8.51163H18.4419C18.8181 8.51163 19.1789 8.66109 19.445 8.92713C19.711 9.19317 19.8605 9.554 19.8605 9.93023C19.8605 10.3065 19.711 10.6673 19.445 10.9333C19.1789 11.1994 18.8181 11.3488 18.4419 11.3488H11.3488V18.4419C11.3488 18.8181 11.1994 19.1789 10.9333 19.445C10.6673 19.711 10.3065 19.8605 9.93023 19.8605C9.554 19.8605 9.19317 19.711 8.92713 19.445C8.66109 19.1789 8.51163 18.8181 8.51163 18.4419V11.3488H1.4186C1.04237 11.3488 0.68154 11.1994 0.4155 10.9333C0.14946 10.6673 0 10.3065 0 9.93023C0 9.554 0.14946 9.19317 0.4155 8.92713C0.68154 8.66109 1.04237 8.51163 1.4186 8.51163H8.51163V1.4186C8.51163 1.04237 8.66109 0.68154 8.92713 0.4155C9.19317 0.14946 9.554 0 9.93023 0Z"
+                                                fill-rule="evenodd" clip-rule="evenodd" fill="#016bc9"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <hr class="">
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <section>
+            
+            
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+                            the collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default
+                            variables.It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                      
+                </div>
+            </div>
+
         </section>
     </section>
-
+    
 </body>
 
 </html>
