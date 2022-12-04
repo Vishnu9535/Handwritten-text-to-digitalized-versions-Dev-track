@@ -4,7 +4,7 @@ from keras.datasets import mnist
 import pandas as pd
 import numpy as np  
 import csv
-dataset='A_ZHandwrittenData.csv' 
+dataset='/home/vishnu/Documents/A_ZHandwritten Data.csv' 
 # z=open(dataset)
 def load_aphabets_dataset(datapath):
         # x=pd.read_csv(datapath)         
@@ -24,6 +24,8 @@ def load_aphabets_dataset(datapath):
                         image=image.reshape((28,28))
                         # print(image)
                         data.append(image)
+                else:
+                        image=image.reshape((32,19))
                 labels.append(label)
         # print(len(data))
         # print(data[0])
@@ -42,14 +44,4 @@ def load_numbers_dataset():
         labels = np.hstack([trainLabels, testLabels])#it combines columns of the data
         # print(labels.shape) 
         return (data,labels)  
-import matplotlib
-matplotlib.use("Agg")
-from sklearn.preprocessing import LabelBinarizer
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
-from imutils import build_montages
-import matplotlib.pyplot as plt
-import numpy as np
-import argparse
-import cv2 
-                                          
+load_numbers_dataset()
