@@ -4,6 +4,7 @@
 }
 
 .navbar {
+    background-color: rgb(217, 223, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -588,6 +589,10 @@ span.itxt {
     padding: 0px 58px;
 }
 
+
+.contributors{
+    background-color: #dbe7f5;
+}
 
 
 
