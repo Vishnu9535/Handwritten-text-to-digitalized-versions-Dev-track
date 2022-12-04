@@ -54,7 +54,7 @@ def output_string(chars,image):
         i = np.argmax(pred)
         prob = pred[i]
         label = labelNames[i]
-        output_text.append(labelNames)
+        output_text.append(labelNames[i])
         print("[INFO] {} - {:.2f}%".format(label, prob * 100))
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
         cv2.putText(image, label, (x - 10, y - 10),
