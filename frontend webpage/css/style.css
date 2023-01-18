@@ -4,7 +4,7 @@
 }
 
 .navbar {
-    background-color: rgb(217, 223, 255);
+    background-color: rgb(221 208 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -606,11 +606,11 @@ span.itxt {
 }
 
 .shadowBoxB{
-    box-shadow: 0 0 6px 3px #98d8fe;
+    box-shadow: 0 0 6px 6px #98d8fe;
     background: rgb(255 255 255 / 19%);
     padding: 15px;
     overflow: hidden;
-    border-radius: 32px;
+    border-radius: 21px;
     
 }
 
@@ -642,16 +642,52 @@ span.itxt {
     font-family: 'Oswald', sans-serif;
     display:flex;
     justify-content:center;
+    background-color: rgb(155, 127, 242);
 }
 
 
+.burger{
+    display:none;
+    position:absolute;
+    cursor: pointer;
+    right:5%;
+    top:15px;
+}
+.line{
+    width:33px;
+    background-color:white;
+    height:4px;
+    margin:5px 3px;
 
-
+}
 @media only screen and (max-width:1140px){
     .nav-list{
         flex-direction: column;
+        
     }
     .navbar{
         flex-direction: column;
+        transition:all 0.9s ease-out;
+    }
+    .rightNav{
+        text-align: center;
+    }
+    #search{
+        width: 100%;
+    }
+    .burger{
+        display:block;
+    }
+    .h-nav-resp{
+        height:72px;
+
+    }
+    .v-class-resp{
+        opacity:0;
+    }
+    .container-fluid{
+        flex:auto;
+        align-items: center;
+        justify-content: center;
     }
 }
