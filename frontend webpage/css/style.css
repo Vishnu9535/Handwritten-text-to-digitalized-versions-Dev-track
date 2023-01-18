@@ -14,7 +14,7 @@
 }
 
 .nav-list {
-    width: 50%;
+    width: 70%;
     /*background-color:rgb(149, 143, 143);*/
     display: flex;
     /*justify-content: center;*/
@@ -24,7 +24,7 @@
 .nav-list li {
     list-style: none;
     padding: 23px 23px;
-
+    font-family: 'Oswald', sans-serif;
 }
 
 .logo {
@@ -43,7 +43,8 @@
 .nav-list li a {
     text-decoration: none;
     color: black;
-
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
 }
 
 .nav-list li a:hover {
@@ -53,7 +54,7 @@
 }
 
 .rightNav {
-    width: 50%;
+    width: 30%;
     text-align: right;
     /*background-color: yellow;*/
     padding:0 23px;
@@ -410,6 +411,7 @@
 .btn-sm{
     padding:6px 10px;
     vertical-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 
 .outerShadowBox {
@@ -591,14 +593,65 @@ span.itxt {
 
 
 .contributors{
-    background-color: #dbe7f5;
+    background-color: rgb(65 64 64 / 1%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding:5%;
+}
+
+.headingC{
+    text-align: center;
+    font-size:x-large ;
+}
+
+.shadowBoxB{
+    box-shadow: 0 0 6px 3px #98d8fe;
+    background: rgb(255 255 255 / 19%);
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 32px;
+    
+}
+
+.col-md-B{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: column;
+}
+
+.shadowBoxI{
+    box-shadow: 0 0 6px 3px #c63b3b;
+    background: rgb(10, 10, 10);
+    padding: 15px ;
+    overflow: hidden;
+    border-radius: 2px;
+    width: 90%;
+    height: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-footer{
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Oswald', sans-serif;
+    display:flex;
+    justify-content:center;
 }
 
 
 
 
-
-
-
-
-
+@media only screen and (max-width:1140px){
+    .nav-list{
+        flex-direction: column;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+}
