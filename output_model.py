@@ -41,31 +41,22 @@ def image_conversion(image):
             padded = padded.astype("float32") / 255.0
             padded = np.expand_dims(padded, axis=-1)
             chars.append((padded, (x, y, w, h)))
-            return chars
-def output_string(chars,image):
     boxes = [b[1] for b in chars]
     chars = np.array([c[0] for c in chars], dtype="float32")
     preds = model.predict(chars)
     labelNames = "0123456789"
     labelNames += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     labelNames = [l for l in labelNames]
-    output_text=[]
+    output_text=''
     for (pred, (x, y, w, h)) in zip(preds, boxes):
         i = np.argmax(pred)
         prob = pred[i]
         label = labelNames[i]
-        output_text.append(labelNames[i])
-        print("[INFO] {} - {:.2f}%".format(label, prob * 100))
-        cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        cv2.putText(image, label, (x - 10, y - 10),
-		    cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 0), 2)
-    print(output_text)
-    cv2.imshow("Image", image)
-    cv2.waitKey(0)
+        output_text+=label
     return output_text
 def main():
     image=input_image(img)
     chars=image_conversion(image)
-    output_text=output_string(chars,image)
+    print(chars)
 if __name__=="__main__":
     main()
