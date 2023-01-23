@@ -112,12 +112,12 @@ def get_text(path):
 		text+=label
 		# draw the prediction on the image
 		print("[INFO] {} - {:.2f}%".format(label, prob * 100))
-		cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-		cv2.putText(image, label, (x - 10, y - 10),
-			cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 0), 2)
+		# cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+		# cv2.putText(image, label, (x - 10, y - 10),
+		# 	cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 0), 2)
 
 	# show the image
 	# print(fin)
 	# cv2.imshow("Image", image)
 	# cv2.waitKey(0)
-	# return text
+	return text
