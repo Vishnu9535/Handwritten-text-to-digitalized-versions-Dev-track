@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Handwritten Image to Text!!</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -26,7 +26,7 @@
         <!--<img src="image/website-background-templates.jpg" alt="background not available" hidden>-->
         <nav class="navbar h-nav-resp"><!--background class to be changed-->
             <ul class="nav-list v-class-resp">
-                <div class="logo"><img src="image/l5.png" alt="logo"></div>
+                <div class="logo"><img src="{{url_for('static',filename='image/l5.png')}}" alt="logo"></div>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">about</a></li>
                 <li><a href="#services">Services</a></li>
@@ -84,21 +84,16 @@
                             </div>
 
                             <span class="svg_block">
-                                <img src="image/upload-icon.png" width="50%" height="90%" alt="uploader">
+                                <img src="{{url_for('static',filename='image/upload-icon.png')}}" width="50%" height="90%" alt="uploader">
                             </span>
-                            <div class="text-center">
+                            <div class="text-center btn1">
                                 <form method='POST' enctype='multipart/form-data'>
                                     {{ form.hidden_tag()}}
                                     {{form.file()}}
                                     {{form.submit()}}
                                 </form>
-                                <!-- <button type="button" class="btn btn-md" id="uploadBtn">
-                                    <span data-title="Upload Image">
-                                        <i class="fa fa-check">
-                                        </i>
-                                        &nbsp;&nbsp;SUBMIT
-                                    </span>
-                                </button> -->
+                                
+                                 
 
                             </div>
 
@@ -135,6 +130,7 @@
                     </div>
                 </div>
             </div>
+            
 
 
         </section>
