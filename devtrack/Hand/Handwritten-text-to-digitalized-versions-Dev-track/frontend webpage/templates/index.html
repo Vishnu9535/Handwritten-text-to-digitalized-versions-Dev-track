@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Handwritten Image to Text!!</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Rowdies:wght@300&display=swap');
+          </style>
+    <script src="js/resp.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <!--<img src="image/website-background-templates.jpg" alt="background not available" hidden>-->
+        <nav class="navbar h-nav-resp"><!--background class to be changed-->
+            <ul class="nav-list v-class-resp">
+                <div class="logo"><img src="{{url_for('static',filename='image/l5.png')}}" alt="logo"></div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+            <div class="rightNav v-class-resp">
+                <input type="text" name="search" id="search">
+                <button class="btn btn-sm">Search</button>
+            </div>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+        
+
+
+        <section class="background firstSection">
+            <section>
+                <div>
+                    <!--<p class="text-white">&nbsp;</p>-->
+                    <p class="text-white">&nbsp;</p>
+                    <p class="text-white">&nbsp;</p>
+                </div>
+            </section>
+            <div class="col-md-1 outerShadowBox">
+                <div class="box-main">
+                    <div class="firstHalf">
+                        <p class="text-big">Image to Text Converter</p>
+                        <p class="text-small">use the browse button to find the image you need to process</p>
+                        <p class="text-white">&nbsp;</p>
+                        <p class="text-white">&nbsp;</p>
+                        <p class="text-white">&nbsp;</p>
+                        <!--<div class="buttons">
+                        <button class="btn">View Team</button>
+                        <button class="btn"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;Like!!</button>
+                    </div>-->
+                    </div>
+                    <div class="thirdHalf">
+
+                    </div>
+
+                </div>
+                <div class="container-fluid">
+                    <div class="container noP">
+
+                        <div class="col-md-1 shadowBox" id="col-md-1">
+                            <h1 class="h_tool">Upload box</h1>
+                            <div class="parent-ads-wrapper" style="text-align:center">
+                                <div style="display:inline-block;">
+                                </div>
+                                <div style="display:inline-block;margin-left:20px;">
+                                </div>
+                            </div>
+
+                            <span class="svg_block">
+                                <img src="{{url_for('static',filename='image/upload-icon.png')}}" width="50%" height="90%" alt="uploader">
+                            </span>
+                            <div class="text-center btn1">
+                                <form method='POST' enctype='multipart/form-data'>
+                                    {{ form.hidden_tag()}}
+                                    {{form.file()}}
+                                    {{form.submit()}}
+                                </form>
+                                
+                                 
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="container noP">
+                        <div class="col-md-2 shadowBox" id="col-md-2">
+                            <h1 class="h_tool">Tex box</h1>
+
+
+                            <div class="col-xs-7 noP align-self-start ttext">
+                                <div class="tab ">
+                                    <div class="text-right display-inline float-right" id="copy-downlod-option">
+                                        <span class="copyAllText CopyToClipboard" data-copy="1"
+                                            data-title="Copy Result"><i class="fa fa-clone"></i><span
+                                                class="itxt">Copy</span></span>
+                                        <span class="downloadAllText" data-copy="1" data-title="Download .txt"><i
+                                                class="fa fa-download"></i><span class="itxt">Txt</span></span>
+                                        <span class="downloadAllTextdoc" data-copy="1" data-title="Download .doc"><i
+                                                class="fa fa-file-word-o"></i><span class="itxt">Word</span></span>
+                                    </div>
+                                </div>
+                                <div contenteditable="true" id="textt1" class="tabcontent textContainer clipboardText1">
+                                    IGotTEXT!</div>
+                            </div>
+                            <br><h4 align="center"<b>{{pred}}</b></h4>
+                            <br>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </section>
+        <!--<section class="secRight">
+            <div class="paras">
+            <p class="sectionTag text-big">the end of your search is here</p>
+            <p class="sectionSubTag text-small">sidfjisdjfksdjlfslkjdf</p>
+        </div>
+        </section>
+
+        <section class="secLeft">
+            <div class="paras">
+            <p class="sectionTag text-big">the end of your search is here</p>
+            <p class="sectionSubTag text-small">sidfjisdjfksdjlfslkjdf</p>
+        </div>
+        </section>
+
+        <section class="secRight">
+            <div class="paras">
+            <p class="sectionTag text-big">the end of your search is here</p>
+            <p class="sectionSubTag text-small">sidfjisdjfksdjlfslkjdf</p>
+        </div>
+        </section>
+        <div class="container lg:pt-14 p-8">
+            <div class="lg:px-2">
+                <div class="w-full text-center my-6">
+                    <h2 class="font-semibold text-4xl text-2xl text-center ">FAQ</h2>
+                </div>
+                <div class=" w-fill md:flex justify-center items-center">
+                    <div
+                        class="md:w-3/4  md:flex md:justify-end justify-center md:flex-col flex-row my-10 md:p-10 rounded-lg">
+                        <div class="md:mb-0 mb-5 p-5  duration-300 transition-all rounded-lg w-full mb-2">
+                            <div class="flex flex-row justify-between cursor-pointer">
+                                <div>
+                                    <h2 class="font-semibold text-2xl capitalize">How To Copy Text From an Image</h2>
+                                </div>
+                                <div class="flex justify-center items-center cursor-pointer px-5">
+                                    <div><svg width="15" height="15" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.93023 0C10.3065 0 10.6673 0.14946 10.9333 0.4155C11.1994 0.68154 11.3488 1.04237 11.3488 1.4186V8.51163H18.4419C18.8181 8.51163 19.1789 8.66109 19.445 8.92713C19.711 9.19317 19.8605 9.554 19.8605 9.93023C19.8605 10.3065 19.711 10.6673 19.445 10.9333C19.1789 11.1994 18.8181 11.3488 18.4419 11.3488H11.3488V18.4419C11.3488 18.8181 11.1994 19.1789 10.9333 19.445C10.6673 19.711 10.3065 19.8605 9.93023 19.8605C9.554 19.8605 9.19317 19.711 8.92713 19.445C8.66109 19.1789 8.51163 18.8181 8.51163 18.4419V11.3488H1.4186C1.04237 11.3488 0.68154 11.1994 0.4155 10.9333C0.14946 10.6673 0 10.3065 0 9.93023C0 9.554 0.14946 9.19317 0.4155 8.92713C0.68154 8.66109 1.04237 8.51163 1.4186 8.51163H8.51163V1.4186C8.51163 1.04237 8.66109 0.68154 8.92713 0.4155C9.19317 0.14946 9.554 0 9.93023 0Z"
+                                                fill-rule="evenodd" clip-rule="evenodd" fill="#016bc9"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <hr class="">
+                        <div class="md:mb-0 mb-5 p-5  duration-300 transition-all rounded-lg w-full mb-2">
+                            <div class="flex flex-row justify-between cursor-pointer">
+                                <div>
+                                    <h2 class="font-semibold text-2xl capitalize">How photo to text tools Works?</h2>
+                                </div>
+                                <div class="flex justify-center items-center cursor-pointer px-5">
+                                    <div><svg width="15" height="15" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.93023 0C10.3065 0 10.6673 0.14946 10.9333 0.4155C11.1994 0.68154 11.3488 1.04237 11.3488 1.4186V8.51163H18.4419C18.8181 8.51163 19.1789 8.66109 19.445 8.92713C19.711 9.19317 19.8605 9.554 19.8605 9.93023C19.8605 10.3065 19.711 10.6673 19.445 10.9333C19.1789 11.1994 18.8181 11.3488 18.4419 11.3488H11.3488V18.4419C11.3488 18.8181 11.1994 19.1789 10.9333 19.445C10.6673 19.711 10.3065 19.8605 9.93023 19.8605C9.554 19.8605 9.19317 19.711 8.92713 19.445C8.66109 19.1789 8.51163 18.8181 8.51163 18.4419V11.3488H1.4186C1.04237 11.3488 0.68154 11.1994 0.4155 10.9333C0.14946 10.6673 0 10.3065 0 9.93023C0 9.554 0.14946 9.19317 0.4155 8.92713C0.68154 8.66109 1.04237 8.51163 1.4186 8.51163H8.51163V1.4186C8.51163 1.04237 8.66109 0.68154 8.92713 0.4155C9.19317 0.14946 9.554 0 9.93023 0Z"
+                                                fill-rule="evenodd" clip-rule="evenodd" fill="#016bc9"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <hr class="">
+                        <div class="md:mb-0 mb-5 p-5  duration-300 transition-all rounded-lg w-full mb-2">
+                            <div class="flex flex-row justify-between cursor-pointer">
+                                <div>
+                                    <h2 class="font-semibold text-2xl capitalize"> Why do We Need to extract text from
+                                        images?</h2>
+                                </div>
+                                <div class="flex justify-center items-center cursor-pointer px-5">
+                                    <div><svg width="15" height="15" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.93023 0C10.3065 0 10.6673 0.14946 10.9333 0.4155C11.1994 0.68154 11.3488 1.04237 11.3488 1.4186V8.51163H18.4419C18.8181 8.51163 19.1789 8.66109 19.445 8.92713C19.711 9.19317 19.8605 9.554 19.8605 9.93023C19.8605 10.3065 19.711 10.6673 19.445 10.9333C19.1789 11.1994 18.8181 11.3488 18.4419 11.3488H11.3488V18.4419C11.3488 18.8181 11.1994 19.1789 10.9333 19.445C10.6673 19.711 10.3065 19.8605 9.93023 19.8605C9.554 19.8605 9.19317 19.711 8.92713 19.445C8.66109 19.1789 8.51163 18.8181 8.51163 18.4419V11.3488H1.4186C1.04237 11.3488 0.68154 11.1994 0.4155 10.9333C0.14946 10.6673 0 10.3065 0 9.93023C0 9.554 0.14946 9.19317 0.4155 8.92713C0.68154 8.66109 1.04237 8.51163 1.4186 8.51163H8.51163V1.4186C8.51163 1.04237 8.66109 0.68154 8.92713 0.4155C9.19317 0.14946 9.554 0 9.93023 0Z"
+                                                fill-rule="evenodd" clip-rule="evenodd" fill="#016bc9"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <hr class="">
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <section class="contributors"> 
+            
+            <div class="col-md-B shadowBoxB">
+                <div>
+                    <h2 class="headingC">Contributors</h2></div>
+                    <br>
+                    <h1>Vishnu</h1><h1>anish</h1><hi>vaibhav</hi><h1>abhshek</h1><h1>anit dias</h1><h1>janhavi</h1>
+                <!--<div class="col-md-inner shadowBoxI">
+                    </div>
+                    <br>
+                    
+                    <div class="col-md-inner shadowBoxI">
+                    </div>
+                    <br>
+                    <div class="col-md-inner shadowBoxI">
+                    </div>
+                    <br>
+                    <div class="col-md-inner shadowBoxI">
+                    </div>
+                    <br>
+                    <div class="col-md-inner shadowBoxI">
+                    </div>
+                    <br>
+                    <div class="col-md-inner shadowBoxI">
+                    </div>
+                    <br>
+                -->
+                
+                
+            
+                
+                
+
+                
+                
+
+
+            </div>
+            
+        </section>
+        <footer>
+            <p class="text-footer">
+                Copyright &copy; 2027 @DevTrack - All rights reserved
+            </p>
+            
+        </footer>
+
+    </section>
+    <script src="js/resp.js"></script>
+</body>
+
+</html>
