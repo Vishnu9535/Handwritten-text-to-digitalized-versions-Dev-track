@@ -691,3 +691,6 @@ span.itxt {
         justify-content: center;
     }
 }
+.name{
+    font-family: 'Oswald', sans-serif;
+    font-size:25px;}
