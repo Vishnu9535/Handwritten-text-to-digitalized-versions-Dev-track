@@ -23,7 +23,7 @@
 
 <body>
     <section>
-        <!--<img src="image/website-background-templates.jpg" alt="background not available" hidden>-->
+        <img src="{{url_for('static',filename='image/website-background-templates.jpg')}}" alt="background not available" hidden>
         <nav class="navbar h-nav-resp"><!--background class to be changed-->
             <ul class="nav-list v-class-resp">
                 <div class="logo"><img src="{{url_for('static',filename='image/l5.png')}}" alt="logo"></div>
@@ -211,46 +211,14 @@
                 </div>
             </div>
         </div>-->
-        <section class="contributors"> 
-            
-            <div class="col-md-B shadowBoxB">
-                <div>
-                    <h2 class="headingC">Contributors</h2></div>
-                    
-                    <h1 class="name"><a href="https://github.com/Vishnu9535">Vishnu</a></h1><h1 class="name"><a href="https://github.com/Anishsuresh3">Anish S</a></h1><h1 class="name"><a href="https://github.com/stonedseeker">Vaibhav Singh</a></h1><h1 class="name"><a href="https://github.com/Abhishek32971">Abhishek R</a></h1><h1>anit dias</h1><h1>janhavi</h1>
-                <!--<div class="col-md-inner shadowBoxI">
-                    </div>
-                    <br>
-                    
-                    <div class="col-md-inner shadowBoxI">
-                    </div>
-                    <br>
-                    <div class="col-md-inner shadowBoxI">
-                    </div>
-                    <br>
-                    <div class="col-md-inner shadowBoxI">
-                    </div>
-                    <br>
-                    <div class="col-md-inner shadowBoxI">
-                    </div>
-                    <br>
-                    <div class="col-md-inner shadowBoxI">
-                    </div>
-                    <br>
-                -->
-                
-                
-            
-                
-                
-
-                
-                
-
-
-            </div>
-            
-        </section>
+        <div class="bottom-container">
+            <a class="footer-link" href="https://github.com/Vishnu9535">Vishnu</a>
+            <a class="footer-link" href="https://github.com/Anishsuresh3">Anish</a>
+            <a class="footer-link" href="https://github.com/Abhishekrp">Abhishek</a>
+            <a class="footer-link" href="https://www.github.com/stonedseeker">Vaibhav</a>
+            <a class="footer-link" href="https://www.github.com/stonedseeker">Anit</a>
+            <a class="footer-link" href="https://www.github.com/stonedseeker">Janhavi</a>
+        </div>
         <footer>
             <p class="text-footer">
                 Copyright &copy; 2027 @DevTrack - All rights reserved
